@@ -10,8 +10,9 @@ int main() {
     // Você pode utilizar o código do primeiro desafio
 
 
-     printf("******Desafio  Super Trunfo em Logíca C*******\n");
+     printf("****** Desafio  Super Trunfo em Logíca C  ******\n");
      // Declaração das variáveis para primeira carta.
+    
      char estado1;
      char codigo1[4];
      char cidade1[50];
@@ -33,10 +34,9 @@ int main() {
      float densidade2;
      float pib_per_capita2;
 
-
-     // Cadastro das Cartas:
+     //Cadastros das cartas
  
-     // Cadastro da primeira carta.
+      // Cadastro da primeira carta.
      printf(" \nCadastro da primeira carta:\n");
      printf(" Digite o estado (A-H):");  //O estado é representado pelas letras de (A-H)
      scanf(" %c", &estado1);
@@ -45,7 +45,7 @@ int main() {
      scanf(" %3s", codigo1);
 
      printf(" Digite o nome da cidade :"); // Escolha um número de (01-04)
-     scanf("%49s", cidade1);
+     scanf("%s", cidade1);
 
      printf(" Digite a população da cidade:");
      scanf("%d", &populacao1);
@@ -69,7 +69,7 @@ int main() {
      scanf(" %3s", codigo2);
 
      printf(" Digite o nome da cidade:");
-     scanf("%49s", cidade2);
+     scanf("%s", cidade2);
 
      printf(" Digite a população da cidade2:");
      scanf("%d", &populacao2);
@@ -82,8 +82,8 @@ int main() {
 
      printf(" Digite os pontos Turísticos2:");
      scanf("%d", &pontosTuristicos2);
-
-
+     
+        
      // Cálculo da densidade demográfica e PIB per capita
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
@@ -91,15 +91,25 @@ int main() {
     pib_per_capita1 = (pib1 * 1000000000) / populacao1;
     pib_per_capita2 = (pib2 * 1000000000) / populacao2;
 
-    //Comparação
+    //Comparação das duas cartas
     printf("\nComparação entre as Cidades:\n");
 
 
     //Populações
     if (populacao1 > populacao2) { 
-        printf("Maior População : %s", cidade1);
-        
+        printf("Maior População : %s\n", cidade1);   
+    } else if (populacao2 > populacao1) {
+        printf("Maior População : %s\n", cidade2);
+    } else { 
+        printf("As duas cidades possuem a mesma população");
     }
+
+
+    
+
+
+
+
 
     
     
