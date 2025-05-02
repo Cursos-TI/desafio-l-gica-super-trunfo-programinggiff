@@ -91,17 +91,43 @@ int main() {
     pib_per_capita1 = (pib1 * 1000000000) / populacao1;
     pib_per_capita2 = (pib2 * 1000000000) / populacao2;
 
+    //Exibição dos dados cadastrados da primeira carta 
+    printf("\nCarta1:\n");
+    printf("Estado : %c\n", estado1);
+    printf("Código : %s\n", codigo1);
+    printf("Cidade : %s\n", cidade1);
+    printf("População : %d\n", populacao1);
+    printf("Área : %.2f km²\n", area1);
+    printf("PIB : %.2f bilhões de reais\n", pib1);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f Reais\n", pib_per_capita1);//PIB per capita em reais
+
+       // Exibição dos dados cadastrados da segunda carta
+    printf("\nCarta2:\n");
+    printf("Estado : %c\n", estado2);
+    printf("Código : %s\n", codigo2);
+    printf("Cidade : %s\n", cidade2);
+    printf("População : %d\n", populacao2);
+    printf("Área : %.2f km²\n", area2);
+    printf("PIB : %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional2: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f Reais\n", pib_per_capita2);//PIB per capita em reais
+
+    // Super Poder: soma de todos os atributos relevantes + inverso da densidade
+    float super_poder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + pib_per_capita1 + (1.0 / densidade1);
+    float super_poder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pib_per_capita2 + (1.0 / densidade2);
+
+
     //Comparação das duas cartas
     printf("\nComparação entre as Cidades:\n");
 
-
     //Populações
     if (populacao1 > populacao2) { 
-        printf("Maior População : %s\n", cidade1);   
-    } else if (populacao2 > populacao1) {
-        printf("Maior População : %s\n", cidade2);
-    } else { 
-        printf("As duas cidades possuem a mesma população");
+        printf("Cidade 1 tem População.\n");   
+    } else {
+        printf("Cidade 2 tem maior População.\n");
     }
 
 
