@@ -18,10 +18,15 @@ int main() {
      char cidade1[50];
      int populacao1;
      float area1;
-     float pib1; // PIB em bilhoes
+     float pib1;
      int pontosTuristicos1;
      float densidade1;
      float pib_per_capita1;
+      
+
+
+      
+     
 
      // Declaração das variantes para segunda carta.
      char estado2;
@@ -29,7 +34,7 @@ int main() {
      char cidade2[50];
      int populacao2;
      float area2;
-     float pib2; //PIB em bilhoes
+     float pib2; 
      int pontosTuristicos2;
      float densidade2;
      float pib_per_capita2;
@@ -115,22 +120,51 @@ int main() {
     printf("Densidade Populacional2: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f Reais\n", pib_per_capita2);//PIB per capita em reais
 
-    // Super Poder: soma de todos os atributos relevantes + inverso da densidade
-    float super_poder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + pib_per_capita1 + (1.0 / densidade1);
-    float super_poder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pib_per_capita2 + (1.0 / densidade2);
+  
 
 
     //Comparação das duas cartas
-    printf("\nComparação entre as Cidades:\n");
+        printf("\nComparação entre as Cidades:\n");
 
     //Populações
+        printf("Populção:");
     if (populacao1 > populacao2) { 
-        printf("Cidade 1 tem População.\n");   
-    } else {
+        printf("Cidade 1 tem maior População.\n");   
+    }  else {
         printf("Cidade 2 tem maior População.\n");
+
+    }
+
+    // Área
+    printf("Área:");
+    if(area1 > area2) {
+        printf("Cidade 1 tem maior Área.\n");
+    } else {
+        printf("Cidade 2 tem maior Área.\n");
+    }
+    // PIP
+        printf("PIB:");
+    if(pib1 > pib2) {
+        printf("Cidade 1 tem maior PIB.\n");
+    } else { 
+        printf(" Cidade 2 tem maior PIB.\n");
+    }
+
+    //Cidade vencedora entre as comparações
+       printf("\nA cidade vencedora foi:\n");
+    if(populacao1 + area1 + pib1 > populacao2 + area2 + pib2) {
+       printf("***** Cidade 1 *****\n");
+    }  else {
+       printf("***** Cidade 2 *****\n" );
     }
 
 
+
+
+
+    return 0;
+
+}
     
 
 
@@ -166,6 +200,6 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+   
 
-    return 0;
-}
+    
